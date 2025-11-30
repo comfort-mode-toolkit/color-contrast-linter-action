@@ -1,0 +1,23 @@
+name: 'Color Contrast Linter'
+description: 'Lint color pairs for accessibility color contrast compliance.'
+author: 'Your Name'
+inputs:
+  config_file:
+    description: 'Path to the configuration file'
+    required: false
+    default: '.color_pairs.yml'
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install color-contrast-linter
+      shell: bash
+      run: pip install color-contrast-linter
+      
+    - name: Run Lint
+      shell: bash
+      run: cc-lint lint
