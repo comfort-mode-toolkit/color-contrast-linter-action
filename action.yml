@@ -1,6 +1,9 @@
 name: 'Color Contrast Linter'
 description: 'Lint color pairs for accessibility color contrast compliance.'
-author: 'Your Name'
+author: 'Lalitha A R, Comfort Mode Toolkit'
+branding:
+  icon: 'eye'
+  color: 'purple'
 inputs:
   config_file:
     description: 'Path to the configuration file'
